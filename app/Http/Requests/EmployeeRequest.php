@@ -24,7 +24,7 @@ class EmployeeRequest extends FormRequest
         return [
             'full_name' => 'required|string|max:255',
             'email' => 'required|email|unique:employees,email',
-            'mobile' => 'required|string|max:20',
+            'mobile' => 'required|string|max:20|unique:employees,mobile',
             'department' => 'required|string|max:255',
             'designation' => 'required|string|max:255',
             'skills' => 'required|array',
